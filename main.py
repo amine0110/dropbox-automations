@@ -1,27 +1,23 @@
 import dropbox
+import yaml
 
-# Replace this with your access token
-access_token = 'sl.BdLDglgVb1kVRPcHeVAW_wauXso020Rj37Wtbxjmnadk2oeTSBcuUIG1A9tLRpgAAsfRxHPgWvt5wBK75T_cS36cO4du8fK_yAa9UUNFHmQ-Yj9xe__94fOcBWPpA8B8w1CaBZ12rPQ'
+class DropboxDownloader:
+    def __init__(self, config='config.yaml') -> None:
+        self.access_token = self.get_access_token(config)
+        self.dbx = dropbox.Dropbox(self.access_token)
+    
+    def get_access_token(self, config):
+        with open(config) as file:
+            data = yaml.safe_load(file)
+        return data['access_token']
+    
+    def return_file_name(self, dbx_link):
+        self.files_names = []
+        cbct_scans = self.dbx.files_list_folder(dbx_link)
+        for entry in cbct_scans.entries:
+            self.files_names.append(entry.name)
+        return self.files_names
 
-# Create a Dropbox client object
-dbx = dropbox.Dropbox(access_token)
+downloders = DropboxDownloader()
 
-'''# Upload a file
-with open('example.txt', 'rb') as f:
-    dbx.files_upload(f.read(), '/example.txt')
-'''
-
-# List files in a folder
-result = dbx.files_list_folder('/Family Room/CBCT/FINAL DICOMS/JAWS')
-for entry in result.entries:
-    print(entry.name)
-    ext = entry.name.split('.')[1]
-    print(ext)
-
-# Download a file
-"""with open('downloaded_example.zip', 'wb') as f:
-    metadata, res = dbx.files_download('/To_test/alexandrabnissen.zip')
-    f.write(res.content)"""
-
-# Delete a file
-# dbx.files_delete('/example.txt')
+print(downloders.return_file_name('/Family Room/CBCT/FINAL DICOMS/JAWS'))
