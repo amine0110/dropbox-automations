@@ -7,7 +7,8 @@ __pycache__/
 tmp/
 draft.py
 scripts.md
-utils/annotations.txt
+utils/
+checkGPT.py
 
 # C extensions
 *.so
