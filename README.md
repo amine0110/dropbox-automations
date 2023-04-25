@@ -1,5 +1,7 @@
 # Dropbox Automations
 
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCdYyILlPlehK4fKS5DiuMXQ) [![Blog](https://img.shields.io/badge/Blog-FFC800.svg?style=for-the-badge&logo=<badge>&logoColor=white)](https://pycad.co/dropbox-automations/) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)  [![Demo](https://img.shields.io/badge/Demo-0066ff.svg?style=for-the-badge&logo=<badge>&logoColor=<logo-color>)](https://github.com/amine0110/dropbox-automations/blob/main/demo.ipynb) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/pycad_/) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/pycadd/)
+
 ![dropbox_automations](https://user-images.githubusercontent.com/37108394/234244745-53eea842-3003-4ba7-a32b-45e72af183cc.png)
 
 `dropbox-automations` is a Python-based tool designed to streamline the process of working with shared data on Dropbox. It is particularly useful in scenarios where multiple users, such as medical professionals, are collaborating on shared data, such as medical imaging files.
@@ -55,3 +57,14 @@ sequenceDiagram
 
 
 ```
+
+## Releases
+| Release Version | Description | Available |
+| --- | --- | --- |
+| 1.0.0 | Automation: download one or multiple files from one or multiple folders with a fully automated process while also checking the new available data to be downloaded | 04/25/2023 |
+| 2.0.0 | checkGPT: finding the corresponding segmentation for each volume (in case the annotators didn't spell well the name of the file) | Soon |
+
+## 📩 Newsletter
+Stay up-to-date on the latest in computer vision and medical imaging! Subscribe to my newsletter now for insights and analysis on the cutting-edge developments in this exciting field.
+
+https://pycad.co/join-us/
