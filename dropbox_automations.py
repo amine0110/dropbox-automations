@@ -37,7 +37,6 @@ class DropboxDownloader:
         with open(txt_file, 'r') as file:
             # Iterate through the lines in the file
             for line in file:
-                # Print the line (strip() removes any leading/trailing whitespace and newline characters)
                 files_names.append(line.strip())
         
         return files_names
@@ -71,18 +70,3 @@ class DropboxDownloader:
     def __del__(self):
         pass
         # shutil.rmtree('tmp')
-
-downloders = DropboxDownloader(
-    volumes_dir='/Family Room/CBCT/FINAL DICOMS/JAWS',
-    annotations_dir= '/Family Room/CBCT/Final_Versions/JAWS/split jaws',
-)
-
-# print(downloders.return_file_name_from_txt(downloders.volumes_txt))
-
-# downloders.download_volume_annotation()
-
-# downloders.download_multiple_files('/Family Room/CBCT/FINAL DICOMS/JAWS')
-
-
-
-# print(downloders.return_file_name('/Family Room/CBCT/FINAL DICOMS/JAWS'))
